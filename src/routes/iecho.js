@@ -1,5 +1,8 @@
 import express from "express";
 
+import { reverseText } from "../utils/reverseText";
+import { isPalindrome } from "../utils/isPalindrome";
+
 const router = express.Router();
 
 router.get("/", ({ query }, res) => {
@@ -11,12 +14,12 @@ router.get("/", ({ query }, res) => {
 		});
 	}
 
-	const reverseText = text.split("").reverse().join("");
-	const isPalindrome = reverseText === text ? true : false;
+	const resultReverse = reverseText(text);
+	const resultPalindrome = isPalindrome(resultReverse, text);
 
 	const response = {
-		text: reverseText,
-		palindrome: isPalindrome,
+		text: resultReverse,
+		palindrome: resultPalindrome,
 	};
 
 	res.json(response);
