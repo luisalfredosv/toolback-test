@@ -12,6 +12,7 @@ router.get("/", ({ query }, res) => {
 		res.status(400).json({
 			error: "no text",
 		});
+		return;
 	}
 
 	const resultReverse = reverseText(text);
@@ -23,6 +24,7 @@ router.get("/", ({ query }, res) => {
 	};
 
 	res.json(response);
+	return;
 });
 
 export default router;
