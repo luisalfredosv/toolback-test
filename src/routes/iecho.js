@@ -1,7 +1,6 @@
 import express from "express";
 
-import { reverseText } from "../utils/reverseText";
-import { isPalindrome } from "../utils/isPalindrome";
+import { reverseText, isPalindrome } from "../utils/index";
 
 const router = express.Router();
 
