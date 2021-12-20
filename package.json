@@ -6,9 +6,11 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --verbose --silent",
     "dev": "nodemon --exec babel-node -- ./src/server.js",
-    "start": "npm run build && node dist/server.js",
+    "start": "npm run build && node ./build/server.js",
+    "build-babel": "babel -d ./build ./src -s",
     "test:watch": "npm run test -- --watch",
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "clean": "rm -rf build && mkdir build"
   },
   "author": "",
   "license": "ISC",
