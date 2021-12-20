@@ -1,4 +1,4 @@
-import { isPalindrome, reverseText } from "../utils/index";
+import { isPalindrome, reverseText } from "../src/utils/index";
 
 describe("Unit Test", () => {
 	test("Check is palindrome, return false", () => {
