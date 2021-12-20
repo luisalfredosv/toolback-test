@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --verbose --silent",
     "dev": "nodemon --exec babel-node -- ./src/server.js",
-    "start": "npm run build && node ./build/server.js",
+    "start": "npm run build-babel && node ./build/server.js",
     "build-babel": "babel -d ./build ./src -s",
     "test:watch": "npm run test -- --watch",
     "build": "babel src --out-dir dist",
