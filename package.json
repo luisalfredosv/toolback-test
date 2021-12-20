@@ -2,12 +2,13 @@
   "name": "toolback-test",
   "version": "1.0.0",
   "description": "",
-  "main": "./server.js",
+  "main": "./src/server.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --verbose --silent",
-    "dev": "babel-watch ./server.js",
-    "start": "nodemon --exec babel-node -- ./server.js",
-    "test:watch": "npm run test -- --watch"
+    "dev": "nodemon --exec babel-node -- ./src/server.js",
+    "start": "node dist/server.js",
+    "test:watch": "npm run test -- --watch",
+    "build": "babel src --out-dir dist"
   },
   "author": "",
   "license": "ISC",
