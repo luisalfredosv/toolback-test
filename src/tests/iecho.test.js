@@ -11,7 +11,7 @@ describe("Integration Test", () => {
 			.expect("Content-Type", /application\/json/);
 	});
 
-	test("GET /iecho return error 500 not text", async () => {
+	test("GET /iecho return error 400 not text", async () => {
 		const response = await api
 			.get("/iecho?text=")
 			.expect(400)
